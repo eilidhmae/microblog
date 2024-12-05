@@ -1,4 +1,4 @@
-module microblog
+module github.com/eilidhmae/microblog
 
 go 1.23.0
 

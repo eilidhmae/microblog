@@ -9,6 +9,7 @@ clean:
 	rm -f *.html
 
 render:
+	go get github.com/gomarkdown/mdtohtml
 	go install github.com/gomarkdown/mdtohtml
 	./renderhtml.sh
 
