@@ -5,7 +5,7 @@ build:
 	go build -o mb
 
 clean:
-	rm -f mb
+	rm -f mb mb.linux
 	rm -f *.html
 
 render:
@@ -14,3 +14,10 @@ render:
 	./renderhtml.sh
 
 all: clean render build
+
+docker: clean render
+	GOOS=linux go build -o mb.linux
+	docker build . -t microblog:latest
+
+run: docker
+	docker run --rm -p 127.0.0.1:3000:3000 microblog:latest
