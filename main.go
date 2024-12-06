@@ -6,7 +6,7 @@ import (
 	"net/http"
 )
 
-//go:embed *.html
+//go:embed *.html css/*
 var content embed.FS
 
 func main() {
