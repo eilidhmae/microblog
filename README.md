@@ -11,3 +11,7 @@ Desired HTML should be composed as `.md` files and placed in the `content/` path
 2. ./mb                             # start the service on port 3000
 3. visit http://localhost:3000      # Enjoy!
 ```
+
+#### Credits
+
+[Retro CSS](https://raw.githubusercontent.com/markdowncss/retro/refs/heads/master/css/retro.css)
