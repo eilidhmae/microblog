@@ -16,8 +16,7 @@ render:
 all: clean render build
 
 docker: clean render
-	GOOS=linux go build -o mb.linux
-	docker build . -t microblog:latest
+	docker build -t microblog:latest .
 
-run: docker
+run:
 	docker run --rm -p 127.0.0.1:3000:3000 microblog:latest
